@@ -20,3 +20,4 @@ if upload is not None:
   classes=['cardboard', 'glass', 'metal', 'paper', 'plastic', 'trash']
   label = classes[np.argmax(y)]
   st.title(label)
+  

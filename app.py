@@ -12,7 +12,7 @@ if upload is not None:
   opencv_image = cv2.cvtColor(opencv_image,cv2.COLOR_BGR2RGB) # Color from BGR to RGB
   img = Image.open(upload)
   st.image(img,caption='Uploaded Image',width=300)
-  model = keras.models.load_model('/content/gdrive/MyDrive/Colab Notebooks/AI course smartknower/major project/classifier.hdf5')
+  model = keras.models.load_model('classifier.hdf5')
   x = cv2.resize(opencv_image,(224,224))
   x = np.expand_dims(x,axis=0)
   x = preprocess_input(x)
